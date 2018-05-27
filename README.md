@@ -1,4 +1,4 @@
-# Redux Thunkster 🔭 · [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alesmenzel/redux-thunkster/blob/master/LICENCE)
+# Redux Thunkster 🔭 · [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/alesmenzel/redux-thunkster/blob/master/LICENCE) [![npm version](https://badge.fury.io/js/redux-thunkster.svg)](https://badge.fury.io/js/redux-thunkster)
 
 Redux middleware for observing actions and dispatching new actions based on the observed.
 
