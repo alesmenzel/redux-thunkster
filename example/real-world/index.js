@@ -8,9 +8,11 @@ const reducer = (state = {}, action) => {
   };
 };
 
-store = createStore(reducer, applyMiddleware(thunkster));
+const store = createStore(reducer, applyMiddleware(thunkster));
 
 const handler = (action, dispatch, getState) => {
+  console.log(getState(), action); //eslint-disable-line no-console
+
   if (action.type === 'ACTION') {
     dispatch({
       type: 'ACTION_LISTENER',
