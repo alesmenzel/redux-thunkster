@@ -20,8 +20,7 @@
     "test:unit":
       "cross-env NODE_ENV=test mocha --require babel-polyfill --compilers js:babel-core/register \"./src/**/*.spec.js\"",
     "format": "prettier --write \"*.{js,json,css,md}\"",
-    "predeploy": "cd example/real-world && npm install && npm run build",
-    "deploy": "gh-pages -d ./example/real-world/build",
+    "gh-pages": "cd example/real-world && npm run deploy",
     "prepublishOnly": "run-s test build"
   },
   "keywords": ["redux", "side-effects", "redux-listener"],
@@ -38,7 +37,6 @@
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
-    "gh-pages": "^1.1.0",
     "husky": "^1.0.0-rc.8",
     "lint-staged": "^7.1.2",
     "mocha": "^5.2.0",
@@ -60,6 +58,5 @@
   },
   "lint-staged": {
     "*.{js,json,css,md}": ["prettier --write", "git add"]
-  },
-  "dependencies": {}
+  }
 }
