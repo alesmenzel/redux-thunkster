@@ -1,6 +1,6 @@
 {
-  "name": "@alesmenzel/redux-thunkster",
-  "version": "1.0.0",
+  "name": "redux-thunkster",
+  "version": "0.1.0",
   "description": "Redux middleware for listening on actions.",
   "main": "./src/thunkster.js",
   "scripts": {
