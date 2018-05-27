@@ -1,15 +1,32 @@
 {
   "name": "@alesmenzel/redux-thunkster",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Redux middleware for listening on actions.",
+  "main": "./src/thunkster.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "format": "prettier --write \"*.{js,json,css,md}\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["redux", "side-effects", "redux-listener"],
+  "author": "Aleš Menzel <alesmenzel@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "redux": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "husky": "^1.0.0-rc.8",
+    "lint-staged": "^7.1.2",
+    "prettier": "^1.12.1"
+  },
+  "husky": {
+    "pre-commit": "lint-staged",
+    "pre-push": "npm test"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
   }
 }

@@ -1,0 +1,3 @@
+{
+  "extends": ["eslint:recommend", "plugin:prettier/recommended"]
+}
