@@ -1,6 +1,6 @@
-const { expect } = require('chai');
-const sinon = require('sinon');
-const thunkster = require('./thunkster');
+import { expect } from 'chai';
+import sinon from 'sinon';
+import thunkster from './thunkster';
 
 const noop = () => {};
 

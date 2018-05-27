@@ -17,7 +17,8 @@
     "clean": "rimraf ./dist ./lib ./es",
     "test": "run-s test:lint test:unit",
     "test:lint": "eslint .",
-    "test:unit": "mocha \"./src/**/*.spec.js\"",
+    "test:unit":
+      "cross-env NODE_ENV=test mocha --require babel-polyfill --compilers js:babel-core/register \"./src/**/*.spec.js\"",
     "format": "prettier --write \"*.{js,json,css,md}\"",
     "predeploy": "cd example/real-world && npm install && npm run build",
     "deploy": "gh-pages -d ./example/real-world/build",
