@@ -62,3 +62,12 @@ typings/
 
 # vuepress build output
 .vuepress/dist
+
+# Build directories
+dist/
+lib/
+es/
+
+# IDE settings
+.vscode/settings.json
+.idea/

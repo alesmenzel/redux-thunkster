@@ -17,4 +17,4 @@ thunkster.subscribe = listener => {
   return () => thunkster.unsubscribe(listener);
 };
 
-module.exports = thunkster;
+export default thunkster;
