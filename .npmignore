@@ -1,2 +1,5 @@
 # Example directory
 example/
+
+# Test files
+**/*.spec.js
