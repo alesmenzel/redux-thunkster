@@ -1,5 +1,7 @@
+node_modules/
+
 # Example directory
-example/
+examples/
 
 # Build directories
 dist/
