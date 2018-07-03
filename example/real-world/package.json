@@ -4,13 +4,13 @@
   "private": true,
   "homepage": "http://alesmenzel.github.io/redux-thunkster",
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
-    "redux-devtools-extension": "^2.13.2",
-    "redux-thunk": "^2.2.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-thunk": "^2.3.0",
     "redux-thunkster": "^0.3.0"
   },
   "scripts": {
@@ -19,9 +19,9 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm install && npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "npm install && gh-pages -d build"
   },
   "devDependencies": {
-    "gh-pages": "^1.1.0"
+    "gh-pages": "^1.2.0"
   }
 }
