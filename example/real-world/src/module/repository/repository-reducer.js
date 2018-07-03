@@ -1,3 +1,4 @@
+import createReducer from '../../helper/create-reducer';
 import * as types from './repository-action-types';
 
 const initialState = {
@@ -6,29 +7,22 @@ const initialState = {
   error: null,
 };
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case types.REPOSITORIES_REQUEST:
-      return {
-        ...state,
-        isFetching: true,
-      };
-    case types.REPOSITORIES_SUCCESS:
-      return {
-        ...state,
-        isFetching: false,
-        repositories: action.repositories,
-      };
-    case types.REPOSITORIES_FAIL:
-      return {
-        ...state,
-        isFetching: false,
-        repositories: [],
-        error: action.err,
-      };
-    default:
-      return state;
-  }
+const reducers = {
+  [types.REPOSITORIES_REQUEST]: state => ({
+    ...state,
+    isFetching: true,
+  }),
+  [types.REPOSITORIES_SUCCESS]: (state, action) => ({
+    ...state,
+    isFetching: false,
+    repositories: action.repositories,
+  }),
+  [types.REPOSITORIES_FAIL]: (state, action) => ({
+    ...state,
+    isFetching: false,
+    repositories: [],
+    error: action.err,
+  }),
 };
 
-export default reducer;
+export default createReducer(initialState, reducers);

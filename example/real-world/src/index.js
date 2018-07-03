@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom';
 
 import registerServiceWorker from './helper/register-service-worker';
 import store from './helper/store';
-import App from './container/app';
+import App from './application/app';
 
-import './asset/global.css';
+import './assets/global.css';
 
 ReactDOM.render(
   <Provider store={store}>

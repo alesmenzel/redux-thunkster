@@ -1,19 +1,25 @@
+import createListener from '../../helper/create-listener';
 import * as actions from './loader-actions';
+import * as repositoryActionTypes from '../repository';
 
-const listener = (action, dispatch, getState) => {
-  switch (action.type) {
-    case 'repository::REPOSITORIES_REQUEST':
-      dispatch(actions.startLoading());
-      break;
-
-    case 'repository::REPOSITORIES_SUCCESS':
-    case 'repository::REPOSITORIES_FAIL':
-      dispatch(actions.stopLoading());
-      break;
-
-    default:
-      break;
-  }
+const listeners = {
+  [repositoryActionTypes.REPOSITORIES_REQUEST]: (
+    action,
+    dispatch,
+    getState
+  ) => {
+    dispatch(actions.startLoading());
+  },
+  [repositoryActionTypes.REPOSITORIES_SUCCESS]: (
+    action,
+    dispatch,
+    getState
+  ) => {
+    dispatch(actions.stopLoading());
+  },
+  [repositoryActionTypes.REPOSITORIES_FAIL]: (action, dispatch, getState) => {
+    dispatch(actions.stopLoading());
+  },
 };
 
-export default listener;
+export default createListener(listeners);

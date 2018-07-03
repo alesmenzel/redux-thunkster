@@ -1,24 +1,19 @@
+import createReducer from '../../helper/create-reducer';
 import * as types from './loader-action-types';
 
 const initialState = {
   isLoading: false,
 };
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-    case types.START_LOADING:
-      return {
-        ...state,
-        isLoading: true,
-      };
-    case types.STOP_LOADING:
-      return {
-        ...state,
-        isLoading: false,
-      };
-    default:
-      return state;
-  }
+const reducers = {
+  [types.START_LOADING]: state => ({
+    ...state,
+    isLoading: true,
+  }),
+  [types.STOP_LOADING]: state => ({
+    ...state,
+    isLoading: false,
+  }),
 };
 
-export default reducer;
+export default createReducer(initialState, reducers);

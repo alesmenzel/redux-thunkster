@@ -1,2 +1,2 @@
-export const START_LOADING = 'loader::START_LOADING';
-export const STOP_LOADING = 'loader::STOP_LOADING';
+export const START_LOADING = Symbol('loader::START_LOADING');
+export const STOP_LOADING = Symbol('loader::STOP_LOADING');

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchRepositories } from '../../module/repository';
-import App from '../../component/app';
+import App from '../../components/app';
 import LoaderContainer from '../loader';
 
 const AppContainer = props => (
@@ -25,4 +25,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AppContainer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AppContainer);
